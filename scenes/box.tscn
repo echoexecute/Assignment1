@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6ubsklnp37cx"]
+
+[ext_resource type="Texture2D" uid="uid://b7hjav6545306" path="res://assets/Pixel Adventure/Items/Boxes/Box1/Idle.png" id="1_le3ot"]
+[ext_resource type="Script" path="res://scripts/box.gd" id="1_nhf7p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdf7v"]
+
+[node name="box" type="Node2D"]
+script = ExtResource("1_nhf7p")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_le3ot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_wdf7v")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
