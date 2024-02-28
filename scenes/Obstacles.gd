@@ -28,5 +28,5 @@ func _on_timer_timeout():
 	print(delay)
 	print(random_number)
 	delay += 1
-	if delay >= 15:
+	if delay >= 16:
 		delay = 0

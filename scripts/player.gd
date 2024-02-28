@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const GRAVITY: float = 50.0
-const jump_force: float = 70.0
+const GRAVITY: float = 300.0
+const jump_force: float = 200.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
